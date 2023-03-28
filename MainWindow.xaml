@@ -4,6 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WPFWeChatDemo"
+        xmlns:control="clr-namespace:WPFWeChatDemo.Controls"
         mc:Ignorable="d"
         WindowStyle="None" ResizeMode="NoResize" WindowStartupLocation="CenterScreen"
         AllowsTransparency="True"
@@ -78,8 +79,8 @@
             </Grid.RowDefinitions>
             <StackPanel Grid.Row="0" Orientation="Horizontal" HorizontalAlignment="Right">
                 <Button                         
-                    Height="20"
-                    Width="20"
+                    Height="15"
+                    Width="15"
                     HorizontalAlignment="Right"
                     Margin="0,0,10,0"
                     
@@ -89,8 +90,8 @@
                     </Button.Background>
                 </Button>
                 <Button                         
-                    Height="20"
-                    Width="20"
+                    Height="15"
+                    Width="15"
                     HorizontalAlignment="Right"
                     Margin="5,0,10,0"
                     Style="{StaticResource toolButton}"
@@ -105,8 +106,11 @@
                     <ColumnDefinition/>
                     <ColumnDefinition/>
                     <ColumnDefinition/>
-                    <ColumnDefinition/>
                 </Grid.ColumnDefinitions>
+                <control:LoginTypeButton Grid.Column="1" ImageSourcePath="pack://application:,,,/Assets/QQ_not_check.png" Width="70" Height="100" 
+                                         ImageHeight="60" ImageWidth="60" Text1="QQ" 
+                                         MouseEnter="LoginTypeButton_MouseEnter"
+                                         MouseMove="LoginTypeButton_MouseMove" MouseLeave="LoginTypeButton_MouseLeave"></control:LoginTypeButton>
             </Grid>
         </Grid>
     </Grid>

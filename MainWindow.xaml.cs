@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using WPFWeChatDemo.Controls;
 
 namespace WPFWeChatDemo
 {
@@ -28,6 +29,32 @@ namespace WPFWeChatDemo
         private void Button_Close_Click(object sender, RoutedEventArgs e)
         {
             Close();
+        }
+
+        private void LoginTypeButton_MouseMove(object sender, MouseEventArgs e)
+        {
+            LoginTypeButton? loginTypeButton = sender as LoginTypeButton;
+            if (loginTypeButton.IsChecked != true)
+            {
+                loginTypeButton.ImageSourcePath = "pack://application:,,,/Assets/QQ_check.png";
+            }
+        }
+
+        private void LoginTypeButton_MouseLeave(object sender, MouseEventArgs e)
+        {
+            LoginTypeButton? loginTypeButton = sender as LoginTypeButton;
+
+            if (loginTypeButton.IsChecked != true)
+            {
+                loginTypeButton.ImageSourcePath = "pack://application:,,,/Assets/QQ_not_check.png";
+            }
+        }
+
+        private void LoginTypeButton_MouseEnter(object sender, MouseEventArgs e)
+        {
+            LoginTypeButton? loginTypeButton = sender as LoginTypeButton;
+            loginTypeButton.IsChecked = !loginTypeButton.IsChecked;
+            loginTypeButton.ImageSourcePath = "pack://application:,,,/Assets/QQ_check.png";
         }
     }
 }
