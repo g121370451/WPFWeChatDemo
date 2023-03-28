@@ -108,10 +108,11 @@
                     <ColumnDefinition/>
                 </Grid.ColumnDefinitions>
                 <control:LoginTypeButton Grid.Column="1" ImageSourcePath="pack://application:,,,/Assets/QQ_not_check.png" Width="70" Height="100" 
-                                         ImageHeight="60" ImageWidth="60" Text1="QQ" 
+                                         ImageHeight="70" ImageWidth="70" Text1="QQ登录" Foreground="#BFBFBF" FontSize="12"
                                          MouseEnter="LoginTypeButton_MouseEnter"
                                          MouseMove="LoginTypeButton_MouseMove" MouseLeave="LoginTypeButton_MouseLeave"></control:LoginTypeButton>
             </Grid>
+            <control:LoginUsernameComboBox Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center" Width="300" Height="20" ComboBoxHeight="10" ComboBoxWidth="10"></control:LoginUsernameComboBox>
         </Grid>
     </Grid>
 </Window>

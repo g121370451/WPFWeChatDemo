@@ -47,13 +47,15 @@ namespace WPFWeChatDemo
             if (loginTypeButton.IsChecked != true)
             {
                 loginTypeButton.ImageSourcePath = "pack://application:,,,/Assets/QQ_not_check.png";
+                loginTypeButton.Foreground = new SolidColorBrush(Color.FromRgb(0xB7, 0xB7, 0xB7));
             }
         }
 
         private void LoginTypeButton_MouseEnter(object sender, MouseEventArgs e)
         {
             LoginTypeButton? loginTypeButton = sender as LoginTypeButton;
-            loginTypeButton.IsChecked = !loginTypeButton.IsChecked;
+            loginTypeButton.IsChecked = true;
+            loginTypeButton.Foreground = new SolidColorBrush(Color.FromRgb(0x11,0x91,0xff));
             loginTypeButton.ImageSourcePath = "pack://application:,,,/Assets/QQ_check.png";
         }
     }

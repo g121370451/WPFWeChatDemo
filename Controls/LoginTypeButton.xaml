@@ -55,7 +55,7 @@
                                     </ImageBrush>
                                 </Border.Background>
                             </Border>
-                            <TextBlock x:Name="text1" FontSize="8" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.Row="1" Text="{Binding Text1,ElementName=test,Mode=TwoWay}">
+                            <TextBlock x:Name="text1" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.Row="1" FontSize="{Binding Path=FontSize,RelativeSource={RelativeSource AncestorType=UserControl,Mode=FindAncestor}}" Foreground="{Binding Path=Foreground,ElementName=test}" Text="{Binding Text1,ElementName=test,Mode=TwoWay}">
                             </TextBlock>
                         </Grid>
                     </ControlTemplate>
